@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script type="text/javascript">
+
+    // const Persona = () => {
+    //   let propiedades = {
+    //     ojos: 2,
+    //     extremidades: 4,
+    //     saltar: () => '2 metros'
+    //   }
+    //   return {
+    //     propiedades,
+    //     setOjos: (cantidad) => {
+    //       propiedades.ojos = cantidad;
+    //     },
+    //     setSaltar: (cantidad) => {
+    //       propiedades.saltar = () => console.log(`${cantidad} metros`);
+    //     }
+    //   };
+    // };
+    //
+    // let Rodo = Persona();
+    // let Ray = Persona();
+    // Ray.setOjos(5);
+    // Rodo.setSaltar(70);
+    // Rodo.propiedades.saltar();
+
+    // console.log('Rodo: ', Rodo);
+    // console.log('Ray: ', Ray);
+
+    class Animal {
+      constructor(ojos = 2, extremidades = 4, sexo = 'No lo quieras definir, machista opresor', name = '') {
+        this.ojos = ojos;
+        this.extremidades = extremidades;
+        this.sexo = sexo;
+        this.name = name;
+      }
+    }
+
+    class Gato extends Animal {
+      constructor() {
+        super(2,4,'M','Sr. Bigotes');
+      }
+      maullar() {
+        console.log(`${this.name} maullo`);
+      }
+    }
+
+    class Perro extends Animal {
+      constructor(name) {
+        super(2,4,'M', 'Firulais');
+      }
+      ladrar() {
+         console.log('El perro ladra');
+      }
+    }
+
+    class Pez extends Animal {
+      constructor(name) {
+        super(2,4,'F','Dory');
+      }
+      plup() {
+        console.log('El pez hace plup');
+      }
+    }
+
+    class Tortuga extends Animal {
+      constructor(name) {
+        super(2,4,'F','Paquita');
+      }
+      ahh() {
+        console.log('La tortuga hace ahh');
+      }
+    }
+
+    let bigotes = new Gato();
+    let firulais = new Perro();
+    let dory = new Pez();
+    let paquita = new Tortuga();
+
+    console.log('Sr. Bigotes: ', bigotes);
+    bigotes.maullar();
+    console.log('Firulais: ', firulais);
+    firulais.ladrar();
+    console.log('Dory: ', dory);
+    dory.plup();
+    console.log('Paquita: ', paquita);
+    paquita.ahh();
+
+  </script>
+</body>
+</html>
